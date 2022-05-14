@@ -6,20 +6,20 @@ class Cryptex < Formula
   desc "Secure your secrets with a powerful and easy to use CLI application
 "
   homepage "https://github.com/mas2020-golang/cryptex"
-  version "0.2.0-dev.2"
+  version "0.1.0-rc.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/mas2020-golang/cryptex/releases/download/v0.2.0-dev.2/cryptex_0.2.0-dev.2_Darwin-arm64.tar.gz"
-      sha256 "b995d8d4254cd2ee4a5e585ca78b53f7136a69357982c104a45e7ef702939a89"
+    if Hardware::CPU.intel?
+      url "https://github.com/mas2020-golang/cryptex/releases/download/v0.1.0-rc.1/cryptex_0.1.0-rc.1_Darwin-x86_64.tar.gz"
+      sha256 "7dccc84c973619f5c6fcfe765af51a0a2818bd6a4955d8ea5da74dc09a611305"
 
       def install
         bin.install "cryptex"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/mas2020-golang/cryptex/releases/download/v0.2.0-dev.2/cryptex_0.2.0-dev.2_Darwin-x86_64.tar.gz"
-      sha256 "7edfd365399b16cee6b57f7a49d8c08e64e903fceba192d8497c6b1b447bbedf"
+    if Hardware::CPU.arm?
+      url "https://github.com/mas2020-golang/cryptex/releases/download/v0.1.0-rc.1/cryptex_0.1.0-rc.1_Darwin-arm64.tar.gz"
+      sha256 "ab49cac6bd29ff2a0517cd3833a59fa0ba1f63fd8dca30a50d3811b0abbde636"
 
       def install
         bin.install "cryptex"
@@ -29,16 +29,16 @@ class Cryptex < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mas2020-golang/cryptex/releases/download/v0.2.0-dev.2/cryptex_0.2.0-dev.2_Linux-x86_64.tar.gz"
-      sha256 "4698aab8ef268aa4e3ee98e0e91a4155f89ac108c75e08cf08cd1f4c109cfa4a"
+      url "https://github.com/mas2020-golang/cryptex/releases/download/v0.1.0-rc.1/cryptex_0.1.0-rc.1_Linux-x86_64.tar.gz"
+      sha256 "37de2f2444d707bd760286401c8b9d331151f3f17e16af359c793994b3c9be53"
 
       def install
         bin.install "cryptex"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mas2020-golang/cryptex/releases/download/v0.2.0-dev.2/cryptex_0.2.0-dev.2_Linux-arm64.tar.gz"
-      sha256 "ae3cbb71e90127daa406890689d4f2d29784813b5c8d90d34f51e0b5d8b97393"
+      url "https://github.com/mas2020-golang/cryptex/releases/download/v0.1.0-rc.1/cryptex_0.1.0-rc.1_Linux-arm64.tar.gz"
+      sha256 "614a4c00183ae619c7fe55c90f402c93f18b6df05986d54ceb46b874933ceb59"
 
       def install
         bin.install "cryptex"
